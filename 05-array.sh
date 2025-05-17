@@ -2,4 +2,5 @@
 
 devopsgroupteam=("jagadeesh" "sarath" "naresh" "naveen")  
 
-echo "  names ${devopsgroupteam[2]}"
+echo "  names : ${devopsgroupteam[2]}"
+echo " all  names : ${devopsgroupteam[2]}"
