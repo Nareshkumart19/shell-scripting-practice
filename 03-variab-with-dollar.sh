@@ -6,9 +6,6 @@
 person1=$1
 person2=$2
 
-time=$(data)
-
-echo " right now time $tmie"
 
 echo "$person1:: hi , $person2 how are you "
 echo "$person2:: hi $person1 fine and what about you"
