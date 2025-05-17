@@ -1,12 +1,12 @@
 #!/bin/bash
 
-number1=10
-number2=10
+number1=siva
+number2=100
  
  TIME=$(date)
 
  echo " time right now : $TIME"
 
- sum=$((number1*number2))
+ sum=$((number1+number2))
 
- echo " sum of $number1  sum of  $number2 = $sum"
+ echo " sum of $number1 and  $number2 = $sum"
