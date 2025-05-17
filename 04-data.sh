@@ -9,4 +9,4 @@ number2=10
 
  sum=$((number1*number2))
 
- echo " total amount $sum"
+ echo " sum of $number1  sum of  $number2 = $sum"
