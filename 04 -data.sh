@@ -5,4 +5,4 @@ number2=3000
  
  TIME=$(date)
 
- echo " time right now : $time"
+ echo " time right now : $TIME"
