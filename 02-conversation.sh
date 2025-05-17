@@ -3,8 +3,8 @@
 
 # conversation with variable 
 
-person1=$1
-person2=$2
+person1=ram
+person2=raju
 
 echo "$person1:: hi , $person2 how are you "
 echo "$person2:: hi $person1 fine and what about you"
