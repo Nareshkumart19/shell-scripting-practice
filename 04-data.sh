@@ -7,6 +7,6 @@ number2=10
 
  echo " time right now : $TIME"
 
- sum=$(number1*number2)
+ sum=$((number1*number2))
 
  echo " total amount $sum"
