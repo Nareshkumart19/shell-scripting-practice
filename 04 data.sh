@@ -3,6 +3,6 @@
 number1=100
 number2=3000
  
- time=$(data)
+ TIME=$(date)
 
  echo " time right now : $time"
