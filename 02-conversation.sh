@@ -3,12 +3,12 @@
 
 # conversation with variable 
 
-name1=$naresh
-name2=$hari
+person1=$naresh
+person2=$hari
 
-echo "$name1:: hi , how are you   $name2"
-echo "$name2:: hi im fine and what about you $name2"
-echo "$name1:: every thing the fine how is you faminy $name2"
-echo "$name2:: all is good , will call u later $name1"
+echo "$person1:: hi , $person2 how are you "
+echo "$person2:: hi $person1 fine and what about you"
+echo "$person1:: every thing the fine how is you faminy"
+echo "$person2:: all is good , will call u later "
 
 
