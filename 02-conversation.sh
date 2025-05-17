@@ -1,10 +1,12 @@
 
 #!/bin/bash
 
-# conversation with varibles 
+# conversation with variable 
 
-Name1=ramesh
-Name2=suresh
+name1=$naresh
+name2=$hari
 
-echo "hi  how are you $Name1"
-echo " fine and how u $Name2"
+echo "$name1: hi , how are you   $name1"
+echo "$name2; hi im fine and what about you $hari"
+echo "$name1: every thing the fine how is you faminy $name2"
+echo "$name2: all is good , will call u later $name1"
