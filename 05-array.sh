@@ -1,5 +1,5 @@
 #!bin/bash
 
-devopsgroupteam=("naresh" "jagadeesh" "sarath") 
+devopsgroupteam=("jagadeesh" "sarath") 
 
-echo " first name $devopsgroupteam"
+echo "  names $devopsgroupteam"
