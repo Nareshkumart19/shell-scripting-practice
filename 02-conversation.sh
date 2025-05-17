@@ -10,3 +10,4 @@ echo "$name1: hi , how are you   $name1"
 echo "$name2; hi im fine and what about you $hari"
 echo "$name1: every thing the fine how is you faminy $name2"
 echo "$name2: all is good , will call u later $name1"
+
