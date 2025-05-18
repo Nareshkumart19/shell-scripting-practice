@@ -1,7 +1,7 @@
 #!/bin/bash
 
 userid=(id -u)
-if [ $userid -nq 0 ]
+if [ $userid -ne 0 ]
 then
     echo "ERROR,  run the script with root user"
     exit 1
