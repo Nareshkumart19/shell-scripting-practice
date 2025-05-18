@@ -10,7 +10,7 @@ else
    echo " you are runing with root acess"
 fi
 
-dnf install mysqloppkio -y
+dnf install mysql -y
 
 #dnf remove mysql -y
 
