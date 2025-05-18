@@ -10,6 +10,14 @@ else
    echo " you are runing with root acess"
 fi
 
-#dnf install mysql -y
+dnf install mysqloppkio -y
 
-dnf remove mysql -y
+#dnf remove mysql -y
+
+if [ $? -ne 0 ]
+then
+   echo "installing musql  is .... sucess"
+else
+    echo " installing my sql is .... fail"   
+    #exit 1
+fi    
