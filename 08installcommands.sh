@@ -16,8 +16,8 @@ dnf install mysqloppkio -y
 
 if [ $? -ne 0 ]
 then
-   echo "installing musql  is .... sucess"
+    echo "installing musql  is .... sucess"
 else
-   echo "installing my sql is .... fail"   
-    #exit 1
+    echo "installing my sql is ....fail"   
+    exit 1
 fi    
