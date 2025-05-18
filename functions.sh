@@ -11,6 +11,7 @@ else
 fi 
 
 #i want to run 3 services at atime
+#validate function takes input as exit status, what commnad they tried to install
 
 VALIDATE(){
     if [ $1 -eq 0 ]
@@ -26,7 +27,7 @@ VALIDATE(){
 dnf list installed  mysql
 if [ $? -ne 0 ]
 then
-    echo "my sql is not installed  going to  install it"
+    echo "mysql is not installed  going to  install it"
     dnf install mysql -y
     VALADATE $? "MYSQL"
 else
@@ -36,7 +37,7 @@ fi
 dnf list installed  python3
 if [ $? -ne 0 ]
 then
-    echo "my sql is not installed  going to  install it"
+    echo "my python3 is not installed  going to  install it"
     dnf install python3 -y
     VALADATE $? "python3"
 else
@@ -46,7 +47,7 @@ fi
 dnf list installed  nginx
 if [ $? -ne 0 ]
 then
-    echo "my sql is not installed  going to  install it"
+    echo "my nginx is not installed  going to  install it"
     dnf install nginx -y
     VALADATE $? "nginx"
 else
