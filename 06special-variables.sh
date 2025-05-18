@@ -1,3 +1,4 @@
 #!/bin/bash
 
-echo" All command-line arguments as an array $@"
+echo "All varibles as an array $@"
+echo "The name of the script being executed: $0" 
