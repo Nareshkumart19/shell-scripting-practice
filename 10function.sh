@@ -4,7 +4,8 @@ userid=$(id -u)
 
 if [ $userid -ne 0 ]
 then
-    echo "run the script with root user"
+    echo "ERROR run the script with root user"
+    exit 1
 else
     echo "you are in root user"
 fi 
@@ -14,9 +15,9 @@ fi
 VALIDATE(){
     if [ $1 -eq 0 ]
     then
-        echo "mysql  is inastlling $2    ......sucessfully"
+        echo "is inastlling $2    ......sucessfully"
     else
-        echo "mysql is  installing $2 ...failure"
+        echo "is  installing $2 ...failure"
         exit 1
     fi
 }
