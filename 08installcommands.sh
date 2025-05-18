@@ -26,7 +26,7 @@ if [ $? -ne -0 ]
         exit 1
     fi
 else
-    echo " mysql is a;lredy installd..... nothing to do"
+    echo "mysql is a;lredy installd..... nothing to do"
 fi    
 
 
