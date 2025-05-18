@@ -1,13 +1,10 @@
 #!/bin/bash
 
-NUMBER=$1
+number=$1
 
-if[ $NUMBER -lt 10 ]
+if[ $number -gt 10 ]
 then
-   echo "give the number    $NUMBER less then 10"
+    echo " gibe the $number greter than 10"
 else
-    echo " gine the number $NUMBER not less then 10"
-fi    
-
-
-
+    echo " give the $number not greater 10"
+fi
