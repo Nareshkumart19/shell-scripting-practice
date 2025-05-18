@@ -10,5 +10,6 @@ else
    echo " you are runing with root acess"
 fi
 
-dnf install mysql -y
+#dnf install mysql -y
 
+dnf remove mysql -y
