@@ -30,13 +30,12 @@ then
         exit 1
     fi
 else
-    echo "mysql is a;lredy installd..... nothing to do"
+    echo "mysql is alredy installd..... nothing to do"
 fi    
 
 
 #dnf install mysql -y
 
-##dnf remove mysql -y
 #
 #
 #
