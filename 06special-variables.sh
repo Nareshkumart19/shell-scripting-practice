@@ -8,4 +8,4 @@ echo "user rununing the script: $USER"
 echo "home directory user $HOME"
 echo "PID OF THE SCRIPT  $$"
 sleep 10 &
-echo " The process ID of the last background command : $!
+echo " The process ID of the last background command : $!"
