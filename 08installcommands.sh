@@ -13,9 +13,12 @@ fi
 
 
 # root user
-dnf list installed mysql
 
-if [ $? -ne -0 ]
+dnf list installed mysql
+#check alredy installed or not . if installed $? is 0, then
+#if not installed $? is not 0. expression is true
+ 
+if [ $? -ne 0 ]
 then
     echo "mysql is not installed ...going to install it"
     dnf install mysql -y
