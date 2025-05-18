@@ -19,5 +19,5 @@ then
     echo "installing musql  is .... sucess"
 else
     echo "installing my sql is ....fail"   
-    #exit 1
+    exit 1
 fi    
