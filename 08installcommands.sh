@@ -18,6 +18,6 @@ if [ $? -ne 0 ]
 then
    echo "installing musql  is .... sucess"
 else
-    echo " installing my sql is .... fail"   
+    echo "installing my sql is .... fail"   
     #exit 1
 fi    
