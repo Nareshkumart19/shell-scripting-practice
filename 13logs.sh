@@ -16,7 +16,7 @@ else
 fi 
 
 LOGFOLDER="/var/log/shell-scripting-practice"
-SCRIPT_NAME=$($0 |cut -d "." -f1)
+SCRIPT_NAME=$(echo  $0 |cut -d "." -f1)
 LOGFILE="$LOGFOLDER/$SRIPT_NAME.log"
 
 mkdir -p $LOGFOLDER
@@ -32,7 +32,7 @@ VALIDATE(){
     then
         echo -e "is inastlling $2    ....$G sucessfully $N"
     else
-        echo -e "is  installing $2 . $R   failure $N"
+        echo -e "is  installing $2 . $R .... failure $N"
         exit 1
     fi
 }
