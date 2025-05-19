@@ -1,12 +1,16 @@
 #!/bin/bash
 
 
+
+userid=$(id -u)
+
+
 R="\e[31m"
 G="\e[32m"
 y="\e[33m"
 N="\e[0m"
 
-userid=$(id -u)
+
 
 if [ $userid -ne 0 ]
 then
@@ -23,9 +27,9 @@ fi
 VALIDATE(){
     if [ $1 -eq 0 ]
     then
-        echo "is inastlling $2    ....$G..sucessfully $N"
+        echo -e "is inastlling $2    ....$G...sucessfully $N"
     else
-        echo "is  installing $2 . $R..failure$N"
+        echo -e "is  installing $2 . $R..failure $N"
         exit 1
     fi
 }
@@ -38,7 +42,7 @@ then
     dnf install mysql -y
     VALIDATE $? "MYSQL"
 else
-    echo -e "mysql is alresy installed  ...$Y in your system$N"
+    echo -e "mysql is alresy installed  ...$Y in your system $N"
 fi
 
 dnf list installed  python3
