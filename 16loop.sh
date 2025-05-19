@@ -35,7 +35,7 @@ VALIDATE(){
         echo -e "is inastlling $2    ....$G sucessfully $N" | tee -a $LOGFILE
     else
         echo -e "is  installing $2 . $R   failure $N" | tee -a $LOGFILE
-        exit 1
+        exit 1s
     fi
 }
 
@@ -43,6 +43,7 @@ VALIDATE(){
 for pakages in ${PAKAGES[@]}
 do
  dnf list installed $pakages &>>$LOGFILE
+ if
  then
     echo -e "$pakages is not installed  going to install it" | tee -a $LOGFILE
     dnf install $pakages -y &>>$LOGFILE
