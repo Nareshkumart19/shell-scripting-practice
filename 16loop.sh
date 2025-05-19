@@ -40,7 +40,15 @@ VALIDATE(){
 }
 
 
-for pakages in ${PAKAGES[@]}
+#if you dont want intrest chage  in side cide always for pakage  give like this =  for pakages in $@
+
+
+
+#for pakages in ${PAKAGES[@]}
+
+#we are using aruments
+
+for pakages in $@
 do
  dnf list installed $pakages &>>$LOGFILE
  if [ $? -ne 0 ]
@@ -57,7 +65,7 @@ done
 
 #dnf list installed  mysql
 #if [ $? -ne 0 ]
-#then
+#thens
 #    echo -e "mysql is not installed  going to install it" | tee -a $LOGFILE
 #    dnf install mysql -y &>>$LOGFILE
 #    VALIDATE $? "MYSQL"
