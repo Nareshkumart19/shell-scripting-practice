@@ -19,7 +19,7 @@ echo "script started exeuted at : $(date)" &>>$LOGFILE
 
 if [ $userid -ne 0 ]
 then
-    echo -e "ERROR $R run the script with root use $N"
+    echo -e "ERROR $R run the script with root use $N" | tee -a &>>$LOGFILE
     exit 1
 else
     echo "you are in root user"
@@ -33,9 +33,9 @@ fi
 VALIDATE(){
     if [ $1 -eq 0 ]
     then
-        echo -e "is inastlling $2    ....$G sucessfully $N" tee -a &>>$LOGFILE
+        echo -e "is inastlling $2    ....$G sucessfully $N" | tee -a &>>$LOGFILE
     else
-        echo -e "is  installing $2 . $R   failure $N" tee -a &>>$LOGFILE
+        echo -e "is  installing $2 . $R   failure $N" | tee -a &>>$LOGFILE
         exit 1
     fi
 }
@@ -43,17 +43,17 @@ VALIDATE(){
 dnf list installed  mysql
 if [ $? -ne 0 ]
 then
-    echo -e "mysql is not installed  going to install it" tee -a &>>$LOGFILE
+    echo -e "mysql is not installed  going to install it" | tee -a &>>$LOGFILE
     dnf install mysql -y &>>$LOGFILE
     VALIDATE $? "MYSQL"
 else
-    echo -e "mysql is alresy installed  ...$Y in your system $N" tee -a &>>$LOGFILE
+    echo -e "mysql is alresy installed  ...$Y in your system $N" | tee -a &>>$LOGFILE
 fi
 
 dnf list installed  python3
 if [ $? -ne 0 ]
 then
-    echo -e "my python3 is not installed  going to $Y install it $N" &>>$LOGFILE
+    echo -e "my python3 is not installed  going to $Y install it $N" | tee -a &>>$LOGFILE
     dnf install python3 -y &>>$LOGFILE
     VALIDATE $? "python3"
 else
