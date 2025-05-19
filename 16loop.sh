@@ -11,6 +11,7 @@ N="\e[0m"
 LOGFOLDER="/var/log/shellscript.logs"
 SCRIPT_NAME=$(echo $0  | cut -d "." -f1)
 LOGFILE="$LOGFOLDER/$SCRIPT_NAME.log"
+PAKAGES=("mysql" "python" "httpd")
 
 mkdir -p $LOGFOLDER
 echo "script started exeuted at : $(date)" &>>$LOGFILE
@@ -43,8 +44,8 @@ for pakages in ${PAKAGES[@]}
 do
  dnf list installed $pakages &>>$LOGFILE
  then
-    echo -e "pakages is not installed  going to install it" | tee -a $LOGFILE
-    dnf install pakages -y &>>$LOGFILE
+    echo -e "$pakages is not installed  going to install it" | tee -a $LOGFILE
+    dnf install $pakages -y &>>$LOGFILE
     VALIDATE $? "pakages"
 else
     echo -e "pakages is alresy installed  ...$Y in your system $N" | tee -a $LOGFILE
@@ -52,35 +53,36 @@ fi
 done
 
 
-dnf list installed  mysql
-if [ $? -ne 0 ]
-then
-    echo -e "mysql is not installed  going to install it" | tee -a $LOGFILE
-    dnf install mysql -y &>>$LOGFILE
-    VALIDATE $? "MYSQL"
-else
-    echo -e "mysql is alresy installed  ...$Y in your system $N" | tee -a $LOGFILE
-fi
 
-dnf list installed  python3
-if [ $? -ne 0 ]
-then
-    echo -e "my python3 is not installed  going to $Y install it $N" &>>$LOGFILE
-    dnf install python3 -y &>>$LOGFILE
-    VALIDATE $? "python3"
-else
-    echo -e  "python3 is already $Y installed in your system $N" | tee -a $LOGFILE
-fi
-
-dnf list installed  nginx
-if [ $? -ne 0 ]
-then
-    echo -e "my nginx is not installed  going to  install it" | tee -a $LOGFILE
-    dnf install nginx -y &>>$LOGFILE
-    VALIDATE $? "nginx"
-else
-    echo -e "nginx is $Y already installed in your system $N" | tee -a $LOGFILE
-fi
+#dnf list installed  mysql
+#if [ $? -ne 0 ]
+#then
+#    echo -e "mysql is not installed  going to install it" | tee -a $LOGFILE
+#    dnf install mysql -y &>>$LOGFILE
+#    VALIDATE $? "MYSQL"
+#else
+#    echo -e "mysql is alresy installed  ...$Y in your system $N" | tee -a $LOGFILE
+#fi
+#
+#dnf list installed  python3
+#if [ $? -ne 0 ]
+#then
+#    echo -e "my python3 is not installed  going to $Y install it $N" &>>$LOGFILE
+#    dnf install python3 -y &>>$LOGFILE
+#    VALIDATE $? "python3"
+#else
+#    echo -e  "python3 is already $Y installed in your system $N" | tee -a $LOGFILE
+#fi
+#
+#dnf list installed  nginx
+#if [ $? -ne 0 ]
+#then
+#    echo -e "my nginx is not installed  going to  install it" | tee -a $LOGFILE
+#    dnf install nginx -y &>>$LOGFILE
+#    VALIDATE $? "nginx"
+#else
+#    echo -e "nginx is $Y already installed in your system $N" | tee -a $LOGFILE
+#fi
 
 
 
