@@ -1,5 +1,10 @@
 #!/bin/bash
 
+
+#-gt greter than
+#-lt less than
+#-eq  equal 
+#-ne  not equal
 number=$1
 
 if [ $number -lt 10 ]
