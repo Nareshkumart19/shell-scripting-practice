@@ -43,7 +43,7 @@ VALIDATE(){
 for pakages in ${PAKAGES[@]}
 do
  dnf list installed $pakages &>>$LOGFILE
- if
+ if [ $? -ne 0 ]
  then
     echo -e "$pakages is not installed  going to install it" | tee -a $LOGFILE
     dnf install $pakages -y &>>$LOGFILE
