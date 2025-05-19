@@ -53,7 +53,7 @@ fi
 dnf list installed  python3
 if [ $? -ne 0 ]
 then
-    echo -e "my python3 is not installed  going to $Y install it $N" | tee -a &>>$LOGFILE
+    echo -e "my python3 is not installed  going to $Y install it $N" &>>$LOGFILE
     dnf install python3 -y &>>$LOGFILE
     VALIDATE $? "python3"
 else
@@ -63,11 +63,11 @@ fi
 dnf list installed  nginx
 if [ $? -ne 0 ]
 then
-    echo -e "my nginx is not installed  going to  install it" &>>$LOGFILE
+    echo -e "my nginx is not installed  going to  install it" | tee -a &>>$LOGFILE
     dnf install nginx -y &>>$LOGFILE
     VALIDATE $? "nginx"
 else
-    echo -e "nginx is $Y already installed in your system $N" tee -a &>>$LOGFILE
+    echo -e "nginx is $Y already installed in your system $N" | tee -a &>>$LOGFILE
 fi
 
 
