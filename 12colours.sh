@@ -7,7 +7,7 @@ userid=$(id -u)
 
 R="\e[31m"
 G="\e[32m"
-y="\e[33m"
+Y="\e[33m"
 N="\e[0m"
 
 
@@ -27,9 +27,9 @@ fi
 VALIDATE(){
     if [ $1 -eq 0 ]
     then
-        echo -e "is inastlling $2    ....$G...sucessfully $N"
+        echo -e "is inastlling $2    ....$G sucessfully $N"
     else
-        echo -e "is  installing $2 . $R..failure $N"
+        echo -e "is  installing $2 . $R   failure $N"
         exit 1
     fi
 }
@@ -38,7 +38,7 @@ VALIDATE(){
 dnf list installed  mysql
 if [ $? -ne 0 ]
 then
-    echo -e "mysql is not installed  going to $Y install it $N"
+    echo -e "mysql is not installed  going to install it"
     dnf install mysql -y
     VALIDATE $? "MYSQL"
 else
@@ -62,5 +62,5 @@ then
     dnf install nginx -y
     VALIDATE $? "nginx"
 else
-    echo -e "nginx is already installed in your $Y system $N"
+    echo -e "nginx is already installed in your $Y system $N "
 fi
