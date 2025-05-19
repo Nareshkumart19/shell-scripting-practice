@@ -15,7 +15,7 @@ else
     echo "you are in root user"
 fi 
 
-LOGFOLDER="/var/log/shell-scripting-practice"
+LOGFOLDER="/var/log/shellscript"
 SCRIPT_NAME=$(echo  $0 |cut -d "." -f1)
 LOGFILE="$LOGFOLDER/$SRIPT_NAME.log"
 
