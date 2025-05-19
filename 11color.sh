@@ -1,3 +1,3 @@
 #!/bin/bash
 
-echo -e "\e[32m Hi this naresh kumar 
+echo -e "\e[32m" Hi this naresh kumar
