@@ -28,7 +28,7 @@ SCRIPT_NAME=$(echo $0  | cut -d "." -f1)
 LOGFILE="$LOGFOLDER/$SCRIPT_NAME.log"
 
 mkdir -p $LOGFOLDER
-echo "script started exeuted at : $(data)" &>>$LOGFILE
+echo "script started exeuted at : $(date)" &>>$LOGFILE
 
 VALIDATE(){
     if [ $1 -eq 0 ]
